@@ -1,24 +1,34 @@
 # calculator project in python 
-# version 1.1
+# version 1.2
+
+import math
 
 class Calculator:
 
     def addition(self,number1,number2):
-        addition = number1 + number2
-        return addition
+        return number1 + number2 
 
     def subtraction(self,number1,number2):
-        subtraction = number1 - number2
-        return subtraction
+        return number1 - number2
 
     def multiplication(self,number1,number2):
-        multiplication = number1 * number2
-        return multiplication
-
+        return number1 * number2
+      
     def division(self,number1,number2):
-        division = number1 / number2
-        return division
+        return number1 / number2
+       
+    def sqroot(self,number1):
+        return math.isqrt(number1)
 
+    def exponential(self,number1,number2):
+        return number1 ** number2
+        
+    def division_rest(self,number1,number2):
+        return number1 % number2
+
+    def logarithm(self,number1):
+        return math.log(number1)
+        
 # creating Calculator Instance
 calculator = Calculator()
 
@@ -27,12 +37,12 @@ while True:
     print("====================== Calculator ================================")
     print("================= Operations available ===========================")
     print("== addition '+' subtraction '-' multiplication '*' division '/' ==")
+    print("== sqr root 'sqr' exponential 'exp' div rest 'rest' logarithm 'log'")
     print("================== To Quit press Q ===============================")
     number1 = int(input("type the first number: "))
     operation = input("type the operation symbol: ")
     number2 = int(input("type the second number: "))
 
-    
     # associating operation symbol with specific function
     if operation == '+':
         print(calculator.addition(number1,number2))
@@ -42,8 +52,15 @@ while True:
         print(calculator.multiplication(number1,number2))
     elif operation == '/':
         print(calculator.division(number1,number2))
-    
-    
+    elif operation == 'sqr':
+        print(calculator.sqroot(number1))
+    elif operation == 'exp':
+        print(calculator.exponential(number1,number2))
+    elif operation == 'rest':
+        print(calculator.division_rest(number1,number2))
+    elif operation == 'log':
+        print(calculator.logarithm(number1))
+
     var = input("continue or quit?")
     if var == 'q':
         break
@@ -51,19 +68,3 @@ while True:
 
 
 
-# Some tests
-
-#calculadora1 = Calculator()
-
-#calculadora1.addition(7,2)
-#...
-#print(calculadora1.display)
-#calculadora1.multiplication(9,7)
-#...
-#print(calculadora1.display)
-#calculadora1.subtraction(875,256)
-#...
-#print(calculadora1.display)
-#calculadora1.division(575,20)
-#...
-#print(calculadora1.display)
