@@ -1,2 +1,2 @@
 # calculator
-calculator project in python
+calculator application using  python
