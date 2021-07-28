@@ -6,9 +6,8 @@ import math
 class Calculator:
 
     def addition(self,number1,number2):
-        addition = number1 + number2
-        return addition 
-
+        return number1 + number2
+        
     def subtraction(self,number1,number2):
         return number1 - number2
 
